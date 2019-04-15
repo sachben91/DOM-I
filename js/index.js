@@ -38,5 +38,49 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let navAnchor = document.querySelectorAll('nav a')
+navAnchor[0].textContent = "Services"
+navAnchor[1].textContent = "Product"
+navAnchor[2].textContent = "Vision"
+navAnchor[3].textContent = "Features"
+navAnchor[4].textContent = "About"
+navAnchor[5].textContent = "Contact"
+navAnchor.forEach(function(navelement){navelement.style.color = "green"})
+var nanchor = document.createElement('a')
+var textanchor = document.createTextNode('Company')
+nanchor.appendChild(textanchor)
+document.querySelector('nav').appendChild(nanchor) 
+var panchor = document.createElement('a')
+var pcontent = document.createTextNode('Team')
+panchor.appendChild(pcontent)
+document.querySelector('nav').prepend(panchor)
+let ctaH1 = document.querySelector('.cta-text h1')
+ctaH1.innerHTML = 'Dom<br>is<br>Awesome'
+let ctaButton = document.querySelector('.cta-text button ')
+ctaButton.textContent = siteContent['cta']['button']
+let imgHeader = document.getElementById('cta-img')
+imgHeader.setAttribute('src', siteContent['cta']['img-src'])
+let textContentH4 = document.querySelectorAll('.text-content h4')
+textContentH4[0].textContent = siteContent['main-content']['features-h4']
+textContentH4[1].textContent = siteContent['main-content']['about-h4']
+textContentH4[2].textContent = siteContent['main-content']['services-h4']
+textContentH4[3].textContent = siteContent['main-content']['product-h4']
+textContentH4[4].textContent = siteContent['main-content']['vision-h4']
+let textContentBody = document.querySelectorAll('.text-content p')
+textContentBody[0].textContent = siteContent['main-content']['features-content']
+textContentBody[1].textContent = siteContent['main-content']['about-content']
+textContentBody[2].textContent = siteContent['main-content']['services-content']
+textContentBody[3].textContent = siteContent['main-content']['product-content']
+textContentBody[4].textContent = siteContent['main-content']['vision-content']
+let middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+let contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent['contact']['contact-h4']
+let contactBody = document.querySelectorAll('.contact p')
+contactBody[0].textContent = siteContent['contact']['address']
+contactBody[1].textContent = siteContent['contact']['phone']
+contactBody[2].textContent = siteContent['contact']['email']
+let footer = document.querySelector ('footer')
+footer.textContent = siteContent['footer']['copyright']
